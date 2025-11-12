@@ -51,6 +51,8 @@
     --text-base--line-height: calc(1.5 / 1);
     --text-lg: 1.125rem;
     --text-lg--line-height: calc(1.75 / 1.125);
+    --text-xl: 1.25rem;
+    --text-xl--line-height: calc(1.75 / 1.25);
     --text-2xl: 1.5rem;
     --text-2xl--line-height: calc(2 / 1.5);
     --text-3xl: 1.875rem;
@@ -709,8 +711,9 @@ header nav {
   position: relative;
   isolation: isolate;
   z-index: 10;
+  margin-top: calc(var(--spacing) * -4);
   display: flex;
-  height: calc(var(--spacing) * 150);
+  height: calc(var(--spacing) * 175);
   align-items: center;
   justify-content: center;
   overflow: hidden;
@@ -1025,8 +1028,9 @@ header nav {
   align-items: center;
   justify-content: center;
   gap: calc(var(--spacing) * 3);
-  padding-inline: calc(var(--spacing) * 6);
+  padding-inline: calc(var(--spacing) * 4);
   text-align: center;
+  text-wrap: balance;
   @media (width >= 64rem) {
     flex-direction: row;
   }
@@ -1072,7 +1076,7 @@ header nav {
   margin-inline: auto;
   margin-top: calc(var(--spacing) * 8);
   max-width: var(--container-7xl);
-  padding-inline: calc(var(--spacing) * 6);
+  padding-inline: calc(var(--spacing) * 4);
   @media (width >= 40rem) {
     margin-top: calc(var(--spacing) * 12);
   }
@@ -1235,7 +1239,7 @@ header nav {
 .before-and-after-container {
   position: relative;
   z-index: 10;
-  padding-top: calc(var(--spacing) * 20);
+  padding-top: calc(var(--spacing) * 18);
   @media (width >= 64rem) {
     padding-top: calc(var(--spacing) * 28);
   }
@@ -1253,7 +1257,7 @@ header nav {
   margin-inline: auto;
   margin-top: calc(var(--spacing) * 8);
   max-width: var(--container-7xl);
-  padding-inline: calc(var(--spacing) * 6);
+  padding-inline: calc(var(--spacing) * 4);
   @media (width >= 40rem) {
     margin-top: calc(var(--spacing) * 12);
   }
@@ -1302,7 +1306,7 @@ header nav {
     margin-block-start: calc(calc(var(--spacing) * 4) * var(--tw-space-y-reverse));
     margin-block-end: calc(calc(var(--spacing) * 4) * calc(1 - var(--tw-space-y-reverse)));
   }
-  padding-inline: calc(var(--spacing) * 6);
+  padding-inline: calc(var(--spacing) * 4);
   text-align: center;
   @media (width >= 64rem) {
     padding-inline: calc(var(--spacing) * 8);
@@ -1487,8 +1491,8 @@ header nav {
   }
 }
 .release-notes h2 {
-  font-size: var(--text-2xl);
-  line-height: var(--tw-leading, var(--text-2xl--line-height));
+  font-size: var(--text-xl);
+  line-height: var(--tw-leading, var(--text-xl--line-height));
   --tw-font-weight: var(--font-weight-semibold);
   font-weight: var(--font-weight-semibold);
   --tw-tracking: var(--tracking-tight);
@@ -1529,7 +1533,13 @@ header nav {
     margin-block-start: calc(calc(var(--spacing) * 4) * var(--tw-space-y-reverse));
     margin-block-end: calc(calc(var(--spacing) * 4) * calc(1 - var(--tw-space-y-reverse)));
   }
+  font-size: var(--text-sm);
+  line-height: var(--tw-leading, var(--text-sm--line-height));
   overflow-wrap: break-word;
+  @media (width >= 64rem) {
+    font-size: var(--text-base);
+    line-height: var(--tw-leading, var(--text-base--line-height));
+  }
 }
 .release-notes code {
   border-radius: var(--radius-md);
@@ -1539,8 +1549,6 @@ header nav {
   }
   padding-inline: calc(var(--spacing) * 1);
   padding-block: calc(var(--spacing) * 0.5);
-  font-size: var(--text-sm);
-  line-height: var(--tw-leading, var(--text-sm--line-height));
   &:where(.dark, .dark *) {
     background-color: color-mix(in srgb, #000 20%, transparent);
     @supports (color: color-mix(in lab, red, red)) {
@@ -1580,7 +1588,7 @@ header nav {
   margin-inline: auto;
   margin-top: calc(var(--spacing) * -2);
   max-width: var(--container-7xl);
-  padding-inline: calc(var(--spacing) * 6);
+  padding-inline: calc(var(--spacing) * 4);
   @media (width >= 64rem) {
     padding-inline: calc(var(--spacing) * 8);
   }
@@ -1602,7 +1610,10 @@ header nav {
   @supports (color: color-mix(in lab, red, red)) {
     background-color: color-mix(in oklab, var(--color-black) 3%, transparent);
   }
-  padding: calc(var(--spacing) * 10);
+  padding: calc(var(--spacing) * 6);
+  @media (width >= 48rem) {
+    padding: calc(var(--spacing) * 10);
+  }
   &:where(.dark, .dark *) {
     background-color: color-mix(in srgb, #fff 3%, transparent);
     @supports (color: color-mix(in lab, red, red)) {
@@ -1658,7 +1669,7 @@ header nav {
 .cta-footer-content {
   margin-inline: auto;
   max-width: var(--container-4xl);
-  padding-inline: calc(var(--spacing) * 6);
+  padding-inline: calc(var(--spacing) * 4);
   text-align: center;
   @media (width >= 64rem) {
     padding-inline: calc(var(--spacing) * 8);
@@ -1676,8 +1687,8 @@ header nav {
 .cta-footer-content h2 {
   margin-block: calc(var(--spacing) * 10);
   font-family: var(--font-sans);
-  font-size: var(--text-3xl);
-  line-height: var(--tw-leading, var(--text-3xl--line-height));
+  font-size: var(--text-2xl);
+  line-height: var(--tw-leading, var(--text-2xl--line-height));
   --tw-font-weight: var(--font-weight-semibold);
   font-weight: var(--font-weight-semibold);
   text-wrap: balance;
@@ -2288,7 +2299,7 @@ footer p {
 .footer-container {
   margin-inline: auto;
   max-width: var(--container-7xl);
-  padding-inline: calc(var(--spacing) * 6);
+  padding-inline: calc(var(--spacing) * 4);
   padding-top: calc(var(--spacing) * 16);
   padding-bottom: calc(var(--spacing) * 8);
   @media (width >= 40rem) {
@@ -2390,7 +2401,7 @@ footer p {
   }
 }
 .footer-credits {
-  margin-top: calc(var(--spacing) * 10);
+  margin-top: calc(var(--spacing) * 0);
   border-top-style: var(--tw-border-style);
   border-top-width: 1px;
   border-color: color-mix(in srgb, oklch(21% 0.006 285.885) 10%, transparent);
