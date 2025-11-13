@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const themeOrder = ['light', 'dark', 'system'];
     const themeConfig = {
         light: { label: 'Switch to dark theme', video: 'bg-light.mp4', opacity: 'opacity-25' },
-        dark: { label: 'Switch to system theme', video: 'bg-dark.mp4', opacity: 'opacity-40' },
+        dark: { label: 'Switch to system theme', video: 'bg-dark.mp4', opacity: 'opacity-35' },
         system: { label: 'Switch to light theme', video: null },
     };
 

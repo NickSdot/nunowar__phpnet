@@ -264,8 +264,8 @@
   .opacity-25 {
     opacity: 25%;
   }
-  .opacity-40 {
-    opacity: 40%;
+  .opacity-35 {
+    opacity: 35%;
   }
   .filter {
     filter: var(--tw-blur,) var(--tw-brightness,) var(--tw-contrast,) var(--tw-grayscale,) var(--tw-hue-rotate,) var(--tw-invert,) var(--tw-saturate,) var(--tw-sepia,) var(--tw-drop-shadow,);
@@ -713,15 +713,12 @@ header nav {
   z-index: 10;
   margin-top: calc(var(--spacing) * -4);
   display: flex;
-  height: calc(var(--spacing) * 175);
+  height: calc(var(--spacing) * 160);
   align-items: center;
   justify-content: center;
   overflow: hidden;
   @media (width >= 64rem) {
     margin-top: calc(var(--spacing) * -16);
-  }
-  @media (width >= 64rem) {
-    height: 100vh;
   }
   @media (width >= 64rem) {
     padding-top: calc(var(--spacing) * 16);
